@@ -98,10 +98,21 @@ namespace QLKS_TTN
             if (DialogResult.OK == MessageBox.Show("Bạn có chắc chắn thoát không?", "Hỏi thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
 
-                db.Database.ExecuteSqlCommand("DELETE  DICHVU WHERE MADV=" + txtmadv.Text);
-                db.SaveChanges();
-                MessageBox.Show("Xóa phòng thành công!");
-                btnlammoi_Click(sender, e);
+                //db.Database.ExecuteSqlCommand("DELETE  DICHVU WHERE MADV=" + txtmadv.Text);
+                //db.SaveChanges();
+                //MessageBox.Show("Xóa phòng thành công!");
+                //btnlammoi_Click(sender, e);
+                try
+                {
+                    db.Database.ExecuteSqlCommand("DELETE  DICHVU WHERE MADV=" + txtmadv.Text);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa phòng thành công!");
+                    btnlammoi_Click(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Phải xóa những thông tin liên quan đến dịch vụ này trước");
+                };
             }
         }
 
@@ -141,17 +152,17 @@ namespace QLKS_TTN
                 {
                     txtmadv.Text = dgvdichvu.Rows[e.RowIndex].Cells["MADV"].Value.ToString();
                 }
-                if(dgvdichvu.Rows[e.RowIndex].Cells["TENDV"].Value!=null)
+                if (dgvdichvu.Rows[e.RowIndex].Cells["TENDV"].Value != null)
                 {
                     txttendv.Text = dgvdichvu.Rows[e.RowIndex].Cells["TENDV"].Value.ToString();
 
                 }
-                if(dgvdichvu.Rows[e.RowIndex].Cells["GIATIEN"].Value!=null)
+                if (dgvdichvu.Rows[e.RowIndex].Cells["GIATIEN"].Value != null)
                 {
                     txtgiatien.Text = dgvdichvu.Rows[e.RowIndex].Cells["GIATIEN"].Value.ToString();
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Clear();
             }
