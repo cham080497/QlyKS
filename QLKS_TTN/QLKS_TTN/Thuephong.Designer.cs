@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbThuephong = new System.Windows.Forms.GroupBox();
             this.txtmaphong = new System.Windows.Forms.TextBox();
             this.txtmakh = new System.Windows.Forms.TextBox();
@@ -45,11 +44,7 @@
             this.dtpNgayvao = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvthuephong = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thue = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SoPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.grbThuephong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvthuephong)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +53,6 @@
             // 
             this.grbThuephong.Controls.Add(this.txtmaphong);
             this.grbThuephong.Controls.Add(this.txtmakh);
-            this.grbThuephong.Controls.Add(this.btnthoat);
             this.grbThuephong.Controls.Add(this.btnhuy);
             this.grbThuephong.Controls.Add(this.btnThue);
             this.grbThuephong.Controls.Add(this.ckcChuabiet);
@@ -69,9 +63,9 @@
             this.grbThuephong.Controls.Add(this.dtpNgayvao);
             this.grbThuephong.Controls.Add(this.label1);
             this.grbThuephong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbThuephong.Location = new System.Drawing.Point(91, 11);
+            this.grbThuephong.Location = new System.Drawing.Point(91, 65);
             this.grbThuephong.Name = "grbThuephong";
-            this.grbThuephong.Size = new System.Drawing.Size(618, 191);
+            this.grbThuephong.Size = new System.Drawing.Size(618, 190);
             this.grbThuephong.TabIndex = 3;
             this.grbThuephong.TabStop = false;
             this.grbThuephong.Text = "Thông tin thuê phòng";
@@ -92,11 +86,15 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(537, 139);
+            this.btnthoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthoat.Image = global::QLKS_TTN.Properties.Resources.Button_Previous_icon__1_;
+            this.btnthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthoat.Location = new System.Drawing.Point(634, 24);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 46);
+            this.btnthoat.Size = new System.Drawing.Size(75, 34);
             this.btnthoat.TabIndex = 13;
             this.btnthoat.Text = "Thoát";
+            this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
@@ -190,84 +188,52 @@
             this.dgvthuephong.AllowUserToAddRows = false;
             this.dgvthuephong.BackgroundColor = System.Drawing.Color.White;
             this.dgvthuephong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvthuephong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaPh,
-            this.Thue,
-            this.SoPhong,
-            this.TrangThai});
-            this.dgvthuephong.Location = new System.Drawing.Point(91, 208);
+            this.dgvthuephong.Location = new System.Drawing.Point(91, 261);
             this.dgvthuephong.Name = "dgvthuephong";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Format = "N1";
-            dataGridViewCellStyle2.NullValue = "0";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvthuephong.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.dgvthuephong.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvthuephong.Size = new System.Drawing.Size(618, 231);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Format = "N1";
+            dataGridViewCellStyle1.NullValue = "0";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvthuephong.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.dgvthuephong.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvthuephong.Size = new System.Drawing.Size(618, 178);
             this.dgvthuephong.TabIndex = 4;
             // 
-            // STT
+            // label2
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STT.DefaultCellStyle = dataGridViewCellStyle1;
-            this.STT.Frozen = true;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 70;
-            // 
-            // MaPh
-            // 
-            this.MaPh.DataPropertyName = "MaPh";
-            this.MaPh.HeaderText = "MaPh";
-            this.MaPh.Name = "MaPh";
-            this.MaPh.ReadOnly = true;
-            this.MaPh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.MaPh.Visible = false;
-            // 
-            // Thue
-            // 
-            this.Thue.HeaderText = "Thuê";
-            this.Thue.Name = "Thue";
-            // 
-            // SoPhong
-            // 
-            this.SoPhong.DataPropertyName = "SoPhong";
-            this.SoPhong.HeaderText = "Số phòng";
-            this.SoPhong.Name = "SoPhong";
-            this.SoPhong.ReadOnly = true;
-            this.SoPhong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.SoPhong.Width = 150;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Vivaldi", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(273, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(255, 38);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Quản lý thuê phòng ";
             // 
             // Thuephong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.grbThuephong);
+            this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.dgvthuephong);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Thuephong";
             this.Text = "Thuê phòng";
             this.grbThuephong.ResumeLayout(false);
             this.grbThuephong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvthuephong)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -287,10 +253,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgayvao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvthuephong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPh;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Thue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.Label label2;
     }
 }

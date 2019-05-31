@@ -58,5 +58,11 @@ namespace QLKS_TTN
             Thuephong tp = new Thuephong();
             tp.Show();
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HoaDon hd = new HoaDon();
+            hd.Show();
+        }
     }
 }

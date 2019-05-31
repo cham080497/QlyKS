@@ -17,11 +17,7 @@ namespace QLKS_TTN
     {
         DbQLKS_TTN db = new DbQLKS_TTN();
 
-        public void ShowLoaiPhong(string sql)
-        {
-            Connection.OpenConnection();
-            dgvloaiphong.DataSource = Connection.LayDuLieu("Select* from LOAIPHONG");
-        }
+       
 
         public void Clear()
         {
@@ -34,7 +30,7 @@ namespace QLKS_TTN
         public LoaiPhong()
         {
             InitializeComponent();
-            this.ShowLoaiPhong("select*from PHONG");
+            
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -121,6 +117,16 @@ namespace QLKS_TTN
                 f.Show();
                 Close();
             }
+        }
+
+        private void dgvloaiphong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvloaiphong.DataSource = db.LOAIPHONGs.ToList();
+        }
+
+        private void LoaiPhong_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,7 +20,7 @@ namespace QLKS_TTN
         public void ShowPhong(string sql)
         {
             Connection.OpenConnection();
-            dgvphong.DataSource = Connection.LayDuLieu("Select* from PHONG");
+            dgvphong.DataSource = Connection.LayDuLieu("Select MAPHONG as 'Mã phòng ',TENPHONG as'Tên phòng',LOAIPHONG as 'Loại phòng',TRANGTHAI as 'Trạng thái' from PHONG");
         }
         public void Clear()
         {
@@ -112,6 +112,20 @@ namespace QLKS_TTN
                 db.SaveChanges();
                 MessageBox.Show("Xóa phòng thành công!");
                 btnlammoi_Click(sender, e);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult ret = MessageBox.Show("Bạn có muốn thoát hay không", "Hỏi Thoát",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                frmMain f = new frmMain();
+                f.Show();
+                Close();
             }
         }
     }

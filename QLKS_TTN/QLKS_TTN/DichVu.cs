@@ -97,11 +97,17 @@ namespace QLKS_TTN
         {
             if (DialogResult.OK == MessageBox.Show("Bạn có chắc chắn thoát không?", "Hỏi thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
-
-                db.Database.ExecuteSqlCommand("DELETE  DICHVU WHERE MADV=" + txtmadv.Text);
-                db.SaveChanges();
-                MessageBox.Show("Xóa phòng thành công!");
-                btnlammoi_Click(sender, e);
+                try
+                {
+                    db.Database.ExecuteSqlCommand("DELETE  DICHVU WHERE MADV=" + txtmadv.Text);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa phòng thành công!");
+                    btnlammoi_Click(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Phải xóa những thông tin liên quan đến dịch vụ này trước");
+                };
             }
         }
 
@@ -155,6 +161,11 @@ namespace QLKS_TTN
             {
                 Clear();
             }
+        }
+
+        private void dgvdichvu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

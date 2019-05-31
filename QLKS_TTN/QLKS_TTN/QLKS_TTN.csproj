@@ -186,5 +186,23 @@
   <ItemGroup>
     <None Include="Resources\KS-1-12.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37915124-refresh-rotate-arrow-icon-green-square-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Refresh-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1124959648-203.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Previous-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Previous-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -163,6 +163,11 @@ namespace QLKS_TTN
             }
             
         }
+
+        private void dgvkhachhang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvkhachhang.DataSource = db.KHACHHANGs.ToList();
+        }
     }
     
 }
