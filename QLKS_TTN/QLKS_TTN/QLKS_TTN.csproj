@@ -93,7 +93,6 @@
     <Compile Include="Models\LOAIPHONG.cs" />
     <Compile Include="Models\NHANVIEN.cs" />
     <Compile Include="Models\PHONG.cs" />
-    <Compile Include="Models\QLKS_TTN.cs" />
     <Compile Include="Models\SUDUNGDV.cs" />
     <Compile Include="Models\TAIKHOAN.cs" />
     <Compile Include="Models\THUEPHONG.cs" />

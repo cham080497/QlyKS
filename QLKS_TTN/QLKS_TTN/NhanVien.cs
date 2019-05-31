@@ -31,7 +31,6 @@ namespace QLKS_TTN
             txthoten.Clear();
             txtdiachi.Clear();
             txtsdt.Clear();
-            
             txtmanv.Focus();
         }
         //tạo hàm chuẩn hóa chuối để chuẩn hóa chuỗi nhaaoj vào trong tên nhân viên
@@ -203,7 +202,7 @@ namespace QLKS_TTN
                 // nếu gặp trường hợp không thể load được -> làm trống tất cả các ô
                 Clear();
             }
-}
+        }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {

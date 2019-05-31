@@ -13,10 +13,11 @@ namespace QLKS_TTN.Models
         [StringLength(40)]
         public string USERNAME { get; set; }
 
+        [Required]
         [StringLength(40)]
         public string MATKHAU { get; set; }
 
-        public int? MANV { get; set; }
+        public int MANV { get; set; }
 
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

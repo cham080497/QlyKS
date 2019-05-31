@@ -34,6 +34,11 @@ namespace QLKS_TTN.Models
                 .IsFixedLength()
                 .IsUnicode(false);
 
+            modelBuilder.Entity<NHANVIEN>()
+                .HasMany(e => e.TAIKHOANs)
+                .WithRequired(e => e.NHANVIEN)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<TAIKHOAN>()
                 .Property(e => e.USERNAME)
                 .IsFixedLength();

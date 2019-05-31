@@ -72,11 +72,6 @@ namespace QLKS_TTN
                 txtpass.UseSystemPasswordChar = true;
             }
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
