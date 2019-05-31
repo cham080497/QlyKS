@@ -140,11 +140,23 @@ namespace QLKS_TTN
         {
             if(DialogResult.OK==MessageBox.Show("Bạn có chắc chắn xóa không?","Hỏi Xóa",MessageBoxButtons.OKCancel,MessageBoxIcon.Question))
             {
-                db.Database.ExecuteSqlCommand("UPDATE HOADON SET MAKH =NULL WHERE MAKH=" + txtmakh.Text);
-                db.Database.ExecuteSqlCommand("DELETE KHACHHANG WHERE MAKH=" + txtmakh.Text);
-                db.SaveChanges();
-                MessageBox.Show("Xóa khách hàng thành công!");
-                btnlammoi_Click(sender, e);
+                //db.Database.ExecuteSqlCommand("UPDATE HOADON SET MAKH =NULL WHERE MAKH=" + txtmakh.Text);
+                //db.Database.ExecuteSqlCommand("DELETE KHACHHANG WHERE MAKH=" + txtmakh.Text);
+                //db.SaveChanges();
+                //MessageBox.Show("Xóa khách hàng thành công!");
+                //btnlammoi_Click(sender, e);
+                try
+                {
+                    db.Database.ExecuteSqlCommand("UPDATE HOADON SET MAKH =NULL WHERE MAKH=" + txtmakh.Text);
+                    db.Database.ExecuteSqlCommand("DELETE KHACHHANG WHERE MAKH=" + txtmakh.Text);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa khách hàng thành công!");
+                    btnlammoi_Click(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Phải xóa những thông tin liên quan đến khách hàng này trước");
+                };
             }
         }
 

@@ -97,11 +97,23 @@ namespace QLKS_TTN
         {
             if (DialogResult.OK == MessageBox.Show("Bạn có chắc chắn thoát không?", "Hỏi thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
-                db.Database.ExecuteSqlCommand("update PHONG set MALOAI=NULL WHERE MALOAI= " + txtmaloai.Text);
-                db.Database.ExecuteSqlCommand("DELETE  PHONG WHERE MAPHONG=" + txtmaloai.Text);
-                db.SaveChanges();
-                MessageBox.Show("Xóa phòng thành công!");
-                btnlammoi_Click(sender, e);
+                //db.Database.ExecuteSqlCommand("update PHONG set MALOAI=NULL WHERE MALOAI= " + txtmaloai.Text);
+                //db.Database.ExecuteSqlCommand("DELETE  PHONG WHERE MAPHONG=" + txtmaloai.Text);
+                //db.SaveChanges();
+                //MessageBox.Show("Xóa phòng thành công!");
+                //btnlammoi_Click(sender, e);
+                try
+                {
+                    db.Database.ExecuteSqlCommand("update PHONG set MALOAI=NULL WHERE MALOAI= " + txtmaloai.Text);
+                    db.Database.ExecuteSqlCommand("DELETE  PHONG WHERE MAPHONG=" + txtmaloai.Text);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa phòng thành công!");
+                    btnlammoi_Click(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Phải xóa những thông tin liên quan đến loại phòng này trước");
+                };
             }
         }
 
